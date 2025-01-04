@@ -28,10 +28,10 @@ def get_difficulty_level():
         try:
             print("Choose the difficulty level:")
             print("1. Easy (1-10) - Easy mode, perfect for beginners!")
-            print("2. Medium (1-25) - A bit of a challenge!")
-            print("3. Hard (1-50) - Only for brave guessers!")
-            print("4. Very Hard (1-100) - A real test of skill!")
-            print("5. Super Hard (1-1000) - Prepare for a tough challenge!")
+            print("2. Moderate (1-25) - A bit of a challenge!")
+            print("3. Challenging (1-50) - Only for brave guessers!")
+            print("4. Hard (1-100) - A real test of skill!")
+            print("5. Extreme (1-1000) - Prepare for a tough challenge!")
 
             difficulty_choice = int(input("Difficulty: "))
 

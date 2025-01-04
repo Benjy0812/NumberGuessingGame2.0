@@ -21,7 +21,7 @@ def print_error_message(message):
 
 def get_difficulty_level():
     """
-    Prompts the user to select a difficulty level and returns the corresponding 
+    Prompts the user to select a difficulty level and returns the corresponding
     upper limit for the random number generation.
     """
     while True:
@@ -73,13 +73,12 @@ def user_input(difficulty):
             elif guess < random_number:
                 print("Too low! Try a larger number.")
         except ValueError:
-            print("Error: Please enter a valid number between 1 and "
-                  f"{difficulty}.")
+            print("Error: Please enter a valid number between 1 and " f"{difficulty}.")
 
 
 def start_guessing():
     """
-    Starts the number guessing game, allowing the user to choose the difficulty 
+    Starts the number guessing game, allowing the user to choose the difficulty
     and keep playing until they decide to exit.
     """
     print("🎉 Welcome to the Number Guessing Game! 🎉")
@@ -88,14 +87,18 @@ def start_guessing():
     user_input(difficulty_choice)
 
     while True:
-        user_exit = input(
-            "\nDo you want to play again? "
-            "Type 'yes' to play or 'no' to exit: ").strip().lower()
+        user_exit = (
+            input(
+                "\nDo you want to play again? " "Type 'yes' to play or 'no' to exit: "
+            )
+            .strip()
+            .lower()
+        )
 
-        if user_exit == 'no':
+        if user_exit == "no":
             print("Goodbye! See you next time! 👋")
             break
-        elif user_exit == 'yes':
+        elif user_exit == "yes":
             clear_console()
             break
         else:

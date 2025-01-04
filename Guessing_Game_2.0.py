@@ -65,7 +65,7 @@ def user_input(difficulty):
             attempts += 1
 
             if guess == random_number:
-                print(f"🎉 You guessed it! The number was {random_number}.")
+                print(f"\n🎉 You guessed it! The number was {random_number}.")
                 print(f"It took you {attempts} attempts.")
                 break
             elif guess > random_number:
@@ -73,7 +73,7 @@ def user_input(difficulty):
             elif guess < random_number:
                 print("Too low! Try a larger number.")
         except ValueError:
-            print("Error: Please enter a valid number between 1 and " f"{difficulty}.")
+            print(f"Error: Please enter a valid number between 1 and {difficulty}.")
 
 
 def start_guessing():
@@ -82,27 +82,23 @@ def start_guessing():
     and keep playing until they decide to exit.
     """
     print("🎉 Welcome to the Number Guessing Game! 🎉")
-    difficulty_choice = get_difficulty_level()
-    clear_console()
-    user_input(difficulty_choice)
 
     while True:
-        user_exit = (
-            input(
-                "\nDo you want to play again? " "Type 'yes' to play or 'no' to exit: "
-            )
-            .strip()
-            .lower()
-        )
+        difficulty_choice = get_difficulty_level()
+        clear_console()
+        user_input(difficulty_choice)
 
-        if user_exit == "no":
-            print("Goodbye! See you next time! 👋")
-            break
-        elif user_exit == "yes":
-            clear_console()
-            break
-        else:
-            print_error_message("You can only enter 'yes' or 'no'.")
+        while True:
+            user_exit = input("\nDo you want to play again? (yes or no): ").strip().lower()
+
+            if user_exit == "no":
+                print("Goodbye! See you next time! 👋")
+                return
+            elif user_exit == "yes":
+                clear_console()
+                break
+            else:
+                print_error_message("You can only enter 'yes' or 'no'.")
 
 
 if __name__ == "__main__":

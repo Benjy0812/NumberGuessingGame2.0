@@ -94,6 +94,7 @@ def start_guessing():
             )
 
             if user_exit == "no":
+                clear_console()
                 print("Goodbye! See you next time! 👋")
                 return
             elif user_exit == "yes":

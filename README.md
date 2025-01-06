@@ -17,7 +17,7 @@ Guessing Game 2.0 is the latest version of the classic Python-based guessing gam
 ## Technical Details
 - **Language Used:** Python
 - **Compiled With:** PyInstaller
-- **Compatibility:** Works on Windows.
+- **Compatibility:** Tested on Windows 11 64-bit. Compatibility with other Windows versions or operating systems is not guaranteed but may work.
 
 ## Installation and Usage
 1. Download the executable file (`guessing_game_2.0.exe` or equivalent).

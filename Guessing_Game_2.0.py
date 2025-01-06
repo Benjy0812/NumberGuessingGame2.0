@@ -89,7 +89,9 @@ def start_guessing():
         user_input(difficulty_choice)
 
         while True:
-            user_exit = input("\nDo you want to play again? (yes or no): ").strip().lower()
+            user_exit = (
+                input("\nDo you want to play again? (yes or no): ").strip().lower()
+            )
 
             if user_exit == "no":
                 print("Goodbye! See you next time! 👋")
